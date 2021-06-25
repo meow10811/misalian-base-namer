@@ -1,3 +1,34 @@
+# Algorithm
+from the YouTube video
+
+getBase(base)
+
+Edge case: if the base is not a whole number -- deal with this here.
+
+Base is a whole number.
+Base cases: (haha!)
+If the base is one of the named cases (0-13, 16, 17, 20, 36, 100): Return the relevant name.
+Otherwise:
+    If the number is prime: Append "un" to output. Run again with getBase(base - 1).
+    If the number is composite: 
+        If it can be factored into two named cases:
+            Run with getPrefix(smaller), getBase(larger).
+        Otherwise:
+            Find the closest two factors. (NB: This can likely be helped with square root.)
+            Run with getPrefix(smaller), getBase(larger).
+
+getPrefix(base)
+Assume the base is a natural number > 1.
+If the base is one of the named cases: return the relevant name.
+Otherwise:
+    If the number is prime: Return "hen" + getPrefix(base - 1) + "sna".
+    If the number is composite:
+        If it can be factored into two named cases:
+            Run with getPrefix(smaller), getPrefix(larger).
+        Otherwise:
+            Find the closest two factors.
+            Run with getPrefix(smaller), getPrefix(larger).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
