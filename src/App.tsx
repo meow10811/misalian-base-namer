@@ -12,11 +12,6 @@ const showOutput = (input: string) => {
 const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <form>
-          <input type="submit" value="Go!"/>
-        </form>
-      </header>
     </div>
   );
 }
